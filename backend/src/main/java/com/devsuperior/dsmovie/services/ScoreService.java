@@ -35,7 +35,7 @@ public class ScoreService {
 			user = userRepository.saveAndFlush(user);
 		}
 		
-		Movie movie = movieRepository.findById(dto.getMovieId());	
+		Movie movie = movieRepository.findById(dto.getMovieId()).get();
 		
 		Score score = new Score();
 		score.setMovie(movie);
